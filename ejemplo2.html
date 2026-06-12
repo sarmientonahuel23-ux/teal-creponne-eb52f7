@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Phishing</title> 
+    <style> 
+        * { 
+            box-sizing: border-box; 
+        } 
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: silver; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            min-height: 100vh; 
+        } 
+ 
+        /* ESTILO DEL ENCABEZADO */ 
+        .header-banner { 
+            background-color: #333; 
+            width: 100%; 
+            padding: 15px 20px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            text-align: center; 
+        } 
+        .header-banner h1 { 
+            margin: 0; 
+            font-size: 24px; 
+            color: white; 
+        } 
+ 
+        /* CONTENEDOR PRINCIPAL */ 
+        .main-content { 
+            flex: 1; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;     
+            padding: 20px; 
+        } 
+ 
+        /* TARJETA DEL FORMULARIO */ 
+        .login-card { 
+            background-color: #ffffff; 
+            padding: 40px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+            width: 100%; 
+            max-width: 380px; 
+        } 
+        .login-card h2 { 
+            margin: 0 0 24px 0; 
+            color: #1a1a1a; 
+            text-align: center; 
+            font-size: 20px; 
+        } 
+        .input-group { 
+            margin-bottom: 20px; 
+        } 
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            color: #555555; 
+            font-size: 14px; 
+            font-weight: 500; 
+        } 
+        .input-group input { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #cccccc; 
+            border-radius: 6px; 
+            font-size: 14px; 
+        } 
+        .input-group input:focus { 
+            border-color: #0066cc; 
+            outline: none; 
+        } 
+        .btn-submit { 
+            width: 100%; 
+            padding: 12px; 
+            background-color: #0066cc; 
+            border: none; 
+            color: white; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: 600; 
+        } 
+        .btn-submit:hover { 
+            background-color: #0052a3; 
+        } 
+        
+        .footer-text {
+            text-align: right;
+            padding: 10px;
+            font-size: 12px;
+            color: #333;
+        }
+    </style> 
+</head> 
+<body>
+ 
+<div class="header-banner">
+    <h1>Simulacro de <font size="+2" color="red"><u>PHISHING</u></font></h1> 
+</div> 
+
+<br><br>
+
+<div align="center">
+    <a href="Manualhtml.pdf">
+        <img src="LOGODINEROGRATIS.webp" width="600" height="100" alt="Banner superior">
+    </a>
+</div>
+
+<div class="main-content"> 
+    <div class="login-card"> 
+        <h2>Ingreso al Sistema</h2> 
+        <form id="formSimulacion"> 
+            <div class="input-group"> 
+                <label for="usuario">Usuario o Correo Electrónico</label> 
+                <input type="text" id="usuario" required autocomplete="off" placeholder="ejemplo@correo.com"> 
+            </div> 
+            <div class="input-group"> 
+                <label for="contrasena">Contraseña</label> 
+                <input type="password" id="contrasena" required autocomplete="off" placeholder="••••••••"> 
+            </div> 
+            <button type="submit" class="btn-submit">Iniciar Sesión</button> 
+        </form> 
+    </div> 
+</div> 
+
+<script> 
+document.getElementById('formSimulacion').addEventListener('submit', function(event) { 
+    event.preventDefault();  
+    
+    const usuarioIngresado = document.getElementById('usuario').value;
+    const contrasenaIngresada = document.getElementById('contrasena').value;
+    
+    alert("TUS DATOS HAN SIDO ROBADOS:\n\nUsuario: " + usuarioIngresado + "\nContraseña: " + contrasenaIngresada); 
+}); 
+</script>
+
+<br><br>
+
+<div class="footer-text">
+    <h2><a href="estafas2.html">Click aquí para saber más sobre Phishing y Estafas</h2></a>
+	
+    derechos reservados a julián Sarmiento Y Facundo Mari
+</div>
+
+</body> 
+</html>
